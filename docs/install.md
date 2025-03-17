@@ -2,11 +2,15 @@ This script that allows managing Node updates over nvm.
 
 1. Download the script.
 2. Make it available in PS.
-3. Have a fruitful day 🚀
+3. Run `nvm-up` and have a fruitful day 🚀
 
 ## Make it available in PS
 
 You could just run `nvm-up.ps1` by providing the full path, but that's less convenient.
+
+Creating a PS profile will make a command available for you anywhere.  
+
+### Creat your profile
 
 Check if you already have a generic PS profile:
 ```powershell
@@ -34,3 +38,12 @@ Reload the profile:
 ```
 
 This ensures `nvm-up` is recognized as a command in every PowerShell session.
+
+### Unlock your profile
+
+PowerShell is super careful for normal humans, but as a super human (aka dev 😉) you probably don't need to worry about it too much.
+
+```powershell
+# Permanent unlock of ps1 scripts:
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+```

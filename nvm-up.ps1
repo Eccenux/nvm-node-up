@@ -1,5 +1,7 @@
 <#
 	This script that allows managing Node updates over nvm.
+
+	Author: Maciej Nux Jaros
 #>
 
 $nvmPath = "$env:NVM_HOME\nvm.exe"
