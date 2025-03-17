@@ -26,8 +26,8 @@ Contributions <del>are</del> will be welcome! When v1 is done...
 <del>Please add an issue or a pull request and explain changes you would like to see<del>.
 
 ## 📜 License
-
+<img src="./docs/cc-logo.svg" width="20" alt="CC"> <img src="./docs/cc-by.svg"  width="20" alt="BY">
 - Author: Maciej Nux Jaros
 - License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)<br>
-<img src="./docs/cc-logo.svg" width="20">
-<img src="./docs/cc-by.svg"  width="20">
+
+
