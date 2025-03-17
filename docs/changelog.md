@@ -4,17 +4,21 @@
 
 ### Changes:
 - [x] Base files and PoC.
-- [ ] Docs and info:
-	- [x] Help create a $PROFILE file (create dir, create file, open to edit xor append?).
-	- [x] Main docs linking to others.
-	- [x] Hopes and dreams aka changelog.
-	- [ ] Help on available commands?
 - [x] Install packages from the previous version:
 	- [x] Impl `nvm-up globals-list`.
 	- [x] Impl `nvm-up globals-install`.
 - [ ] split to psm1? (each case of switch as a separate function? return instead of exit?)
 - [ ] Impl `nvm-up up X`:
 	- [ ] .
+
+### Docs and info:
+- [x] Help create a $PROFILE file (create dir, create file, open to edit xor append?).
+- [x] Main docs linking to others.
+- [x] Hopes and dreams aka changelog.
+- [ ] List of available commands: `./docs/commands.md`.
+- [ ] Getting Started
+	- [ ] Quick list of commands syntax.
+	- [ ] Link to `./docs/commands.md`.
 
 ### Extras/maybe
 - [ ] Main improvements (main as in running `nvm-up` without any options)
@@ -47,7 +51,7 @@
 - [ ] .
 - [ ] .
 
-### Functions:
+### Commands of nvm-up:
 
 #### `nvm-up globals-list`
 Is almost the same as: `npm list -g --depth=0 --json > global-modules.temp.json`
