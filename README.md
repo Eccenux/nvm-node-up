@@ -1,6 +1,8 @@
 # nvm-node-up
 
-Welcome to **nvm-node-up**! This script that allows managing **Node updates over nvm** on Windows. Below you'll find important documentation links.
+Welcome to **nvm-node-up**! This script allows you to manage **Node updates over nvm** on Windows. Crucially, it enables copying modules from an installed version to a new one. The provided PowerShell command is `nvm-up`.
+
+Below, you'll find information on how to get started, along with links to more details about *nvm-node-up*.
 
 **PRE RELEASE NOT FOR GENERAL USE**.
 
