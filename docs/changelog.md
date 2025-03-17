@@ -41,8 +41,7 @@
 #### `nvm-up globals-list`
 Is almost the same as: `npm list -g --depth=0 --json > global-modules.temp.json`
 ```
-	alias: nvm-up g-list
-	alias: nvm-up gl
+	aliasses: "gl", "glist", "g-list"
 	param: --to=global-modules.temp.json [optional]
 	Info:
 		- Global modules list ({count}) saved as {path}.
@@ -51,8 +50,7 @@ Is almost the same as: `npm list -g --depth=0 --json > global-modules.temp.json`
 
 #### `nvm-up globals-install` -- install from global-modules.temp.json
 ```
-	alias: nvm-up g-install
-	alias: nvm-up gi
+	aliasses: "gi", "ginstall", "g-install"
 	param: --from=global-modules.temp.json [optional]
 	Lists globals:
 		├── corepack@0.31.0 (omitted already installed)
