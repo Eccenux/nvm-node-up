@@ -9,9 +9,10 @@
 	- [x] Main docs linking to others.
 	- [x] Hopes and dreams aka changelog.
 	- [ ] Help on available commands?
-- [ ] Install packages from the previous version:
-	- [ ] Impl `nvm-up globals-list`.
-	- [ ] Impl `nvm-up globals-install`.
+- [x] Install packages from the previous version:
+	- [x] Impl `nvm-up globals-list`.
+	- [x] Impl `nvm-up globals-install`.
+- [ ] split to psm1? (each case of switch as a separate function? return instead of exit?)
 - [ ] Impl `nvm-up up X`:
 	- [ ] .
 
@@ -33,6 +34,16 @@
 	- Dump as a table, see [Notes](./notes.md#node-versions).
 	- `list 16` show a more detailed view of 16 major.
 	- `list 16.1` show a more detiled view of 16.1.
+- [ ] `nvm-up gi`: add option to skip questions: --force=(exact|same|latest)
+- [ ] `nvm-up gi`: filter out already installed?
+	- Could get a fresh list to variable directly:
+		$jsonContent = & npm list -g --depth=0 --json | ConvertFrom-Json
+	- Then get just the names and skip them.
+	- ...BUT is it OK?
+		I might want to run `nvm-up gi` many times and overwrite what is already installed.
+		I could just skip exact matches...
+		Or I could make this optional... maybe.
+- [ ] `nvm-up gi`: list already installed side-by-side with the ones from json?
 - [ ] .
 - [ ] .
 
@@ -53,8 +64,8 @@ Is almost the same as: `npm list -g --depth=0 --json > global-modules.temp.json`
 	aliasses: "gi", "ginstall", "g-install"
 	param: --from=global-modules.temp.json [optional]
 	Lists globals:
-		├── corepack@0.31.0 (omitted already installed)
-		├── npm@10.8.2 (omitted already installed)
+		├── corepack@0.31.0 (omitted already installed) <-- do we want to omit?
+		├── npm@10.8.2 (omitted already installed) <-- do we want to omit?
 		├── eslint@9.22.0
 		├── gulp-cli@3.0.0
 		├── mocha@11.1.0
