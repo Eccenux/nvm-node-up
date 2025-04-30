@@ -9,7 +9,8 @@
 	- [x] Impl `nvm-up globals-install`.
 - [ ] split to psm1? (each case of switch as a separate function? return instead of exit?)
 - [ ] Impl `nvm-up up X`:
-	- [ ] .
+	- [ ] `nvm-up up X` – specific version.
+	- [ ] `nvm-up up`  – interactive mode (list and choose).
 
 ### Docs and info:
 - [x] Help create a $PROFILE file (create dir, create file, open to edit xor append?).
