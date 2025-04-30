@@ -7,6 +7,12 @@
 - [x] Install packages from the previous version:
 	- [x] Impl `nvm-up globals-list`.
 	- [x] Impl `nvm-up globals-install`.
+- [ ] Enhance UX
+	- [ ] `nvm-up globals-list` should check for overwrite and stop or ask to confirm.
+	- [ ] `nvm-up globals-list` coulbe maybe savew two files one as currently the other adding node version and maybe date (would serve as a backup).
+	- [ ] `nvm-up` (default command) should saying something about other commands
+		either list all...
+		or say something like: "to see commands type 'nvm-up help'"
 - [ ] split to psm1? (each case of switch as a separate function? return instead of exit?)
 - [ ] Impl `nvm-up up X`:
 	- [ ] `nvm-up up X` – specific version.
