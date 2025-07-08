@@ -10,7 +10,7 @@ Below, you'll find information on how to get started, along with links to more d
 
 - [Installation Guide](./docs/install.md) – Steps to install and set up the project.
 - [Changelog](./docs/changelog.md) – See what's new and what's cooking.
-- [Notes](./docs/notes.md) – Developer notes. Might be a bit chaotic.
+- [Notes](./docs/notes.md) – <del>Developer notes. Might be a bit chaotic</del>.
 
 ## 🚀 Getting Started
 
@@ -20,6 +20,28 @@ Basically:
 1. Download the script.
 2. Make it available in PS.
 3. Run `nvm-up` and have a fruitful day 🚀
+
+## 🧪 Basic usage
+
+Again, this is a pre-release... But this should work:
+
+```Powershell
+# Save a list of current global modules
+# (uses a temp file in current dir)
+nvm-up globals-list
+# install new version, e.g. latest LTS:
+nvm install lts
+```
+```Powershell
+# swtich to new (nvm install should tell you what was installed)
+nvm use 22.17.0
+```
+```Powershell
+# Restore global modules
+# (this will use a file generated with globals-list)
+# (a list will be shown, and you will be given a choice of installation type)
+nvm-up globals-install
+```
 
 ## 💡 Contributing
 
