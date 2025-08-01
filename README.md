@@ -1,10 +1,8 @@
 # nvm-node-up
 
-Welcome to **nvm-node-up**! This script allows you to manage **Node updates over nvm** on Windows. Crucially, it enables copying modules from an installed version to a new one. The provided PowerShell command is `nvm-up`.
+Welcome to **nvm-node-up** (or **nvm-up** for short)! This script allows you to manage **Node updates over nvm** on Windows. Crucially, it enables copying modules from an installed version to a new one. The provided PowerShell command is `nvm-up`.
 
-Below, you'll find information on how to get started, along with links to more details about *nvm-node-up*.
-
-**PRE RELEASE NOT FOR GENERAL USE**.
+Below, you'll find information on how to get started, along with links to more details about *nvm-node-up* (docs).
 
 ## 📌 Documentation
 
@@ -23,31 +21,39 @@ Basically:
 
 ## 🧪 Basic usage
 
-Again, this is a pre-release... But this should work:
+This basic commands is all you need to fully switch to a new Node version (with all your modules).
 
+### Prepare and install new Node
+Save a list of current global modules:
 ```Powershell
-# Save a list of current global modules
 # (uses a temp file in current dir)
 nvm-up globals-list
-# install new version, e.g. latest LTS:
+```
+Install new version, e.g. latest LTS:
+```Powershell
 nvm install lts
 ```
+
+### Switch and restore
+Swtich to new Node:
 ```Powershell
-# swtich to new (nvm install should tell you what was installed)
+# (nvm install should tell you what was installed)
+# (version 22.17 is obviously just an example)
 nvm use 22.17.0
 ```
+Restore global modules:
 ```Powershell
-# Restore global modules
 # (this will use a file generated with globals-list)
 # (a list will be shown, and you will be given a choice of installation type)
 nvm-up globals-install
 ```
+That's it. Note that you can switch to other versions and also use the command `nvm-up globals-install`. That way, you can easily install your set of modules to many Node versions.
 
 ## 💡 Contributing
 
-Contributions <del>are</del> will be welcome! When v1 is done...
+Contributions are welcome.
 
-<del>Please add an issue or a pull request and explain changes you would like to see<del>.
+Please add an issue or a pull request and explain changes you would like to see.
 
 ## 📜 License
 <img src="./docs/cc-logo.svg" width="20" alt="CC"> <img src="./docs/cc-by.svg"  width="20" alt="BY">
