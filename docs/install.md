@@ -4,7 +4,13 @@ This script that allows managing Node updates over nvm.
 2. Make it available in PS.
 3. Run `nvm-up` and have a fruitful day ðŸš€
 
-## Make it available in PS
+## 1) Download the script
+
+For easier updates, you can clone this repository to `C:\Program Files\nvm-up\`.
+
+You can also just download `nvm-up.ps1` and put it in `C:\Program Files\nvm-up\nvm-up.ps1`.
+
+## 2) Make it available in PS
 
 You could just run `nvm-up.ps1` by providing the full path, but that's less convenient.
 
@@ -12,7 +18,7 @@ Creating a PS profile will make a command available for you anywhere.
 
 ### Creat your profile
 
-Check if you already have a generic PS profile:
+Check if you already have a generic PS profile (execute this in Powershell as from your standard user account):
 ```powershell
 dir "$HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
 ```
@@ -46,4 +52,28 @@ PowerShell is super careful for normal humans, but as a super human (aka dev ðŸ˜
 ```powershell
 # Permanent unlock of ps1 scripts:
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
+```
+
+## 3) Using nvm-up
+
+### Prepare and install new Node
+```Powershell
+# Save a list of current global modules
+# (uses a temp file in current dir)
+nvm-up globals-list
+# install new version, e.g. latest LTS:
+nvm install lts
+```
+
+### Switch and restore
+```Powershell
+# swtich to new (nvm install should tell you what was installed)
+# (version 22.17 is obviously just an example)
+nvm use 22.17.0
+```
+```Powershell
+# Restore global modules
+# (this will use a file generated with globals-list)
+# (a list will be shown, and you will be given a choice of installation type)
+nvm-up globals-install
 ```
