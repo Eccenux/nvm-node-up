@@ -23,7 +23,7 @@ Check if you already have a generic PS profile (execute this in Powershell as fr
 dir "$HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
 ```
 
-Edit your PowerShell profile:
+Create your PowerShell profile:
 ```powershell
 $main_profile="$HOME\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
 Write-Host "Creating: $main_profile"
@@ -31,13 +31,18 @@ Write-Host "Creating: $main_profile"
 if (!(Test-Path -Path $main_profile)) {
 	New-Item -ItemType File -Path $main_profile -Force
 }
+```
+Edit your PowerShell profile:
+```powershell
 # Open in Notepad
 notepad $main_profile
 ```
-Add the function in your profile (wherever should be fine):
+Add the function in your profile (e.g. add it at the end of file):
 ```powershell
 function nvm-up { & "C:\Program Files\nvm-up\nvm-up.ps1" @args }
 ```
+If it's not obvious — you can change the path above to wherever you placed your copy of `nvm-up.ps1`.
+
 Reload the profile:
 ```powershell
 . $main_profile
